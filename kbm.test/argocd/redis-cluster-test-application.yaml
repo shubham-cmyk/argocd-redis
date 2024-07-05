@@ -9,7 +9,7 @@ spec:
     namespace: redis-cluster-test-ns
     server: https://kubernetes.default.svc
   sources:
-    - repoURL: https://gitea.obmondo.com/EnableIT/kubeaid-config-enableit.git
+    - repoURL: https://github.com/shubham-cmyk/argocd-redis.git
       path: kbm.test/redis-cluster-test.yaml
       targetRevision: redis-cluster-test
   project: default
