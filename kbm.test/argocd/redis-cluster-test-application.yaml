@@ -1,0 +1,18 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: redis-cluster-test
+  namespace: argocd
+spec:
+  destination:
+    namespace: redis-cluster-test-ns
+    server: https://kubernetes.default.svc
+  sources:
+    - repoURL: https://gitea.obmondo.com/EnableIT/kubeaid-config-enableit.git
+      path: k8s/kbm.test/redis-cluster-test.yaml
+      targetRevision: redis-cluster-test
+  project: default
+  syncPolicy:
+    automated:
+    syncOptions: [CreateNamespace=true, ApplyOutOfSyncOnly=true]
