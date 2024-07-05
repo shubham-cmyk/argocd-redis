@@ -10,7 +10,7 @@ spec:
     server: https://kubernetes.default.svc
   sources:
     - repoURL: https://gitea.obmondo.com/EnableIT/kubeaid-config-enableit.git
-      path: k8s/kbm.test/redis-cluster-test.yaml
+      path: kbm.test/redis-cluster-test.yaml
       targetRevision: redis-cluster-test
   project: default
   syncPolicy:
